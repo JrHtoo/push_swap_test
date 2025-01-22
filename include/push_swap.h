@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:27:05 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/01/21 14:19:25 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/01/22 16:22:55 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct s_data
 	int		size;
 	int		nmoves;
 	int		index_limit;
+	int		count_prev;
+	int		count_now;
 	bool	which;
 }	t_data;
 
@@ -43,7 +45,7 @@ void	simple_sort(t_list **stack_a, t_list **stack_b);
 void	index_init(t_list **stack);
 int		ft_largest_index(t_list *stack, int size);
 void	main_sort(t_list **stack_a, t_list **stack_b);
-void	tiny_sort(t_list **stack_a, t_list **stack_b, t_data data);
+void	tiny_sort(t_list **stack_a, t_list **stack_b, t_data data, int size);
 
 // swap instruction
 void	swap_s(t_list **stack_a, t_list **stack_b);

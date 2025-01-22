@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 13:55:49 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/01/21 16:32:01 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/01/22 16:22:40 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,10 +105,10 @@ static void	sort_3(t_list **stack_a, t_list **stack_b, t_data data)
 	}
 }
 
-void	tiny_sort(t_list **stack_a, t_list **stack_b, t_data data)
+void	tiny_sort(t_list **stack_a, t_list **stack_b, t_data data, int size)
 {
-	if (data.size == 2)
+	if (size == 2)
 		sort_2(stack_a, stack_b, data);
-	else if (data.size == 3)
+	else if (size == 3)
 		sort_3(stack_a, stack_b, data);
 }
